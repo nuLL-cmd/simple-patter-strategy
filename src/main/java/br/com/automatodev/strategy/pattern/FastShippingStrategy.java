@@ -1,15 +1,14 @@
-package br.com.automatodev.strategy.repository;
-
-import java.util.List;
+package br.com.automatodev.strategy.pattern;
 
 import br.com.automatodev.strategy.dto.Integration;
-import br.com.automatodev.strategy.enums.EnumName;
+import br.com.automatodev.strategy.dto.ReturnProcess;
 
-public interface IntegrationRepository {
-
-    /* ------------------------------------------------------------------------------------------------------*/
-
-    List<Integration> fetchIntegration(EnumName nameIntegration);
+public interface FastShippingStrategy {
 
     /* ------------------------------------------------------------------------------------------------------*/
+
+    ReturnProcess processShipping(Long logId, Integration integration);
+
+    /* ------------------------------------------------------------------------------------------------------*/
+    
 }
