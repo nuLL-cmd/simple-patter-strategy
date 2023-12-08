@@ -1,5 +1,6 @@
 package br.com.automatodev.strategy.service.implementation;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,16 +31,26 @@ public class FastShippingServiceImpl implements FastShippingService{
         EnumName.INTEGRATION_SENT, new IntegrationSent()
     );
 
+    
+    /* ------------------------------------------------------------------------------------------------------*/
+
     @Override
     public List<ReturnProcess> processIntegration(Long logId, EnumName nameIntegration) {
+
+        List<ReturnProcess> results = new ArrayList<>();
       
         log.info("Processing integration");
 
         integrationRepository.fetchIntegration(nameIntegration).forEach(integration -> {
 
-
+            results.add(fastStrategyMap.get(nameIntegration).processShipping(logId, integration));
         });
 
+        return results;
+
     }
+
+    
+    /* ------------------------------------------------------------------------------------------------------*/
     
 }
