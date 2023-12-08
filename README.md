@@ -1,5 +1,4 @@
 # simple-patter-strategy
-<<<<<<< HEAD
 🤯 A simple project to demonstrate how to use the strategy pattern in the Java programming language.
 
 ## Getting Started
@@ -20,6 +19,3 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
-=======
-🤯A simple project to demonstrate how to use the strategy pattern in the Java programming language.
->>>>>>> a03aa5382c91c607aa21f6512aeb5b6a30eaa436
