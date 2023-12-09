@@ -1,0 +1,36 @@
+app:
+  contextPath: '@project.artifactId@'
+  version: '@project.version@'
+  description: '@project.description@'
+  organization: '@project.organization.name@'
+  name: '@project.name@'
+
+spring:
+  jackson:
+    time-zone: America/Sao_Paulo
+    serialization:
+      write-dates-as-timestamps: 'false'
+    deserialization:
+      fail-on-unknown-properties: 'true'
+    date-format: yyyy-MM-dd HH:mm:ss
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+    format:
+      time: HH:mm:ss
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+    
+#Dados do servidor
+server:
+  servlet:
+    context-path: /@project.artifactId@
+  port: '9005'
+
+
+
